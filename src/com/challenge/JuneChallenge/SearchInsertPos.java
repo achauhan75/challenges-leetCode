@@ -19,9 +19,8 @@ public class SearchInsertPos {
 
     public static int searchInsert(int[] nums, int target) {
         int n = nums.length;
-        if(n == 0) {
+        if(n == 0)
             return 0;
-        }
         int low = 0;
         int high = n-1;
         int mid;
