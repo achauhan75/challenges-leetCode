@@ -24,26 +24,23 @@ public class SearchInsertPos {
         int low = 0;
         int high = n-1;
         int mid;
-        int pos = 0;
         while(low <= high) {
             mid = low + (high-low)/2;
             if(nums[mid] == target) {
                 return mid;
             } else if(nums[mid] > target) {
                 high = mid - 1;
-                pos = mid;
             } else {
                 low = mid + 1;
-                pos = mid + 1;
             }
         }
-        return pos;
+        return high + 1;
     }
     // Driver code
     static public void main (String[] args)
     {
         int []arr = {1,3,5,6};
-        int n = 4;
+        int n = 0;
         System.out.println(searchInsert(arr, n));
     }
 }
